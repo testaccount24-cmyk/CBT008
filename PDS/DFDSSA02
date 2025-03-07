@@ -1,0 +1,21 @@
+//SBGOLOBM JOB ,'SAM GOLOB',CLASS=B,
+//    MSGCLASS=X,NOTIFY=&SYSUID
+//*
+//*********************************************************************
+//*
+//*   Back up CBT working data pack CBTA02, after creating new
+//*    CBT Tape version.  This is a snapshot of CBTA02 at time
+//*    of creation of the new tape version.
+//*
+//*********************************************************************
+//DUMPDASD EXEC PGM=ADRDSSU,REGION=0M
+//SYSPRINT DD SYSOUT=*
+//DISK1    DD UNIT=3390,VOL=SER=CBTA02,DISP=SHR
+//TAPE1    DD DSN=&SYSUID..CBTA02.VOLUME.BACKUP,
+//            DISP=(,CATLG,DELETE),
+//            VOL=SER=(WORK94),
+//            UNIT=3390,SPACE=(CYL,(600,600),RLSE)
+//SYSIN    DD *
+ DUMP FULL INDDNAME(DISK1) OUTDDNAME(TAPE1)             -
+   COMPRESS OPT(4) ADMINISTRATOR
+//*
