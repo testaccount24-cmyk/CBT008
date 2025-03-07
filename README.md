@@ -1,5 +1,9 @@
 # CBT008
 Converted to GitHub via [cbt2git](https://github.com/wizardofzos/cbt2git)
+
+This is still a work in progress. GitHub repos will be deleted and created during this period...
+
+```
 //***FILE 008 now contains the jobs used by Sam Golob to create     *   FILE 008
 //*           this tape.  This stuff (in Arnie's time) used to      *   FILE 008
 //*       be part of File 001, but it was taken out by Sam Golob    *   FILE 008
@@ -216,3 +220,5 @@ Converted to GitHub via [cbt2git](https://github.com/wizardofzos/cbt2git)
 //*        Both of them have also passed on, as has John Ehrman.    *   FILE 008
 //*        We have to be grateful to all of them, for their work.   *   FILE 008
 //*                                                                 *   FILE 008
+
+```
