@@ -220,5 +220,4 @@ This is still a work in progress. GitHub repos will be deleted and created durin
 //*        Both of them have also passed on, as has John Ehrman.    *   FILE 008
 //*        We have to be grateful to all of them, for their work.   *   FILE 008
 //*                                                                 *   FILE 008
-
 ```
