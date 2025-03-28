@@ -1,0 +1,19 @@
+//SBGOLOB1  JOB ,S-GOLOB,
+// NOTIFY=&SYSUID,
+// CLASS=B,MSGCLASS=X
+//******************************************************************//
+//*   CREATE NL TAPE AND DUMP LABELS                               *//
+//******************************************************************//
+//*
+//COPY    EXEC PGM=COPYMODS,REGION=4096K,PARM=LABELS
+//STEPLIB  DD  DISP=SHR,DSN=SYS1.CBT.LINKLIB
+//LABLDUMP DD  DISP=SHR,DSN=SBGOLOB.CBT.CNTL(C508LAB3)
+//SYSPRINT DD  SYSOUT=*
+//PARMREPT DD  SYSOUT=*
+//IN   DD VOL=SER=C508MU,DISP=OLD,UNIT=564,LABEL=(,BLP,EXPDT=98000)
+//OUT1 DD VOL=SER=V508MT,DISP=OLD,UNIT=568,LABEL=(,BLP,EXPDT=98000)
+//SYSIN  DD *
+CUMSEP
+FOOTAGE
+CHGVOL
+/*
