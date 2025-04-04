@@ -1,0 +1,17 @@
+//SBGOLOB1  JOB ,S-GOLOB,
+// NOTIFY=&SYSUID,
+// CLASS=B,MSGCLASS=X
+//******************************************************************//
+//*   MEASURE TAPE AND DUMP LABELS                                 *//
+//******************************************************************//
+//*
+//COPY    EXEC PGM=COPYMODS,REGION=4096K,PARM=READ
+//STEPLIB  DD  DISP=SHR,DSN=SYS1.CBT.LINKLIB
+//SYSPRINT DD  SYSOUT=*
+//PARMREPT DD  SYSOUT=*
+//IN   DD VOL=SER=CBT508,DISP=OLD,UNIT=563,LABEL=(,BLP,EXPDT=98000)
+//SYSIN  DD *
+CUMTOT
+FOOTAGE
+DGSTRI
+/*
