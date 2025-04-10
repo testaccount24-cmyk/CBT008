@@ -1,0 +1,15 @@
+//SBGOLOBT  JOB (ACCT#),S-GOLOB,
+// NOTIFY=&SYSUID,
+// CLASS=B,MSGCLASS=X
+//****************************************************
+//*                                                  *
+//*       AMATERSE WITH PACK OPTION                  *
+//*                                                  *
+//****************************************************
+//JOBLIB  DD   DISP=SHR,DSN=SYS1.MIGLIB
+//STEP     EXEC PGM=AMATERSE,PARM=PACK
+//SYSPRINT DD   SYSOUT=*
+//SYSUT1   DD   DISP=SHR,DSN=CBT.DFDSS.CBT508.BACKUP
+//SYSUT2   DD   DISP=(NEW,CATLG),UNIT=SYSDA,
+//       DSN=CBT.DFDSS.CBT508.TERSED,
+//       SPACE=(CYL,(600,600),RLSE),VOL=SER=WORK92

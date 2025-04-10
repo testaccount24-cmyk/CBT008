@@ -1,0 +1,29 @@
+//SBGOLOB1  JOB (ACCT#),S-GOLOB,
+// NOTIFY=&SYSUID,
+// CLASS=B,MSGCLASS=X
+//******************************************************************//
+//*  JOB TO CREATE NEW CBT TAPE VERSION 508 FROM THE V508 MASTER   *//
+//*    CREATED FROM EDITED FILES ON THIS PDS.                      *//
+//******************************************************************//
+//*    OLD MASTER TAPE VOLUME :    V508MT
+//*    NEW MASTER TAPE VOLUME :    C508MU
+//******************************************************************//
+//COPYFILE PROC FROM=,TO=,DSP=KEEP,UN1=568,UN2=564
+//COPYSTEP EXEC PGM=COPYFILE,REGION=7000K PARM='TAPEL'
+//STEPLIB  DD DISP=SHR,DSN=SYS1.CBT.LINKLIB
+//MSG      DD SYSOUT=*
+//*APELOUT DD SYSOUT=*
+//SELREPT  DD SYSOUT=*
+//SYSABEND DD SYSOUT=*
+//IN       DD DSN=INPUT.FILE,UNIT=&UN1,DISP=SHR,LABEL=EXPDT=98000,
+//            VOL=SER=&FROM
+//TAPELIN  DD DSN=OUTPUT.FILE,
+//            UNIT=(&UN2,,DEFER),VOL=(,RETAIN,SER=&TO),
+//            DISP=(NEW,&DSP),LABEL=EXPDT=98000,DCB=TRTCH=NOCOMP
+//         PEND
+//******************************************************************//
+//*
+//COPYF01  EXEC COPYFILE,FROM=V508MT,TO=C508MU
+//SYSIN    DD *
+   101/101 ALL
+/*
